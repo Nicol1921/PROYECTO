@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Nombre Autor"> <!-- Reemplaza "Nombre Autor" con el nombre del autor -->
+    <meta name="description" content="Página web de un formulario de inicio de sesión y registro"> <!-- Descripción de la página -->
+    <meta name="keywords" content="registro Usuario, formulario de registro, crear cuenta, registro en línea"> <!-- Palabras clave -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario Registro Producto</title> <!-- Título de la página -->
+    <link rel="icon" type="image/x-icon" href=""> <!-- Ruta al ícono del sitio -->
+    <!-- Enlaces a estilos Bootstrap y Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Enlace a un estilo personalizado desde la carpeta 'static' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="text-center">
+    <main class="form-signin w-100 m-auto" class="text-center">
+        <!-- Formulario de registro de referencia -->
+        <form action="{{ url_for('registrarReferencia') }}" method="POST" enctype="multipart/form-data">
+            <!-- Logo del sitio -->
+            <img class="mb-4" src="static/img/logo.png" alt="SANTYFASHION" width=200>
+            <h4 class="text-secondary">SantyFashion</h4>
+            <h1 class="h5 mb-3 fw-normal">Registro Referencia</h1>
+            <!-- Campo para el Id de la Referencia -->
+            <div class="form-floating">
+                <input type="number" class="form-control" id="fLoatingidReferencia" name="idReferencia" placeholder="Ingrese el Id" required="true" autofocus pattern="[0-9]{1, 20}">
+                <label for="fLoatingidReferencia">Id de la Referencia:</label>
+            </div>
+            <!-- Campo para el Nombre -->
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingnombre" name="nombre" placeholder="Ingrese el Nombre" required="true" pattern="[A-Za-z]{1, 20}">
+                <label for="floatingnombre">Nombre:</label>
+            </div>
+            <!-- Campo para la Descripción -->
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingdescripcion" name="descripcion" placeholder="Ingrese la Descripción" required="true" pattern="[A-Za-z]{1, 50}">
+                <label for="floatingdescripcion">Descripción:</label>
+            </div>
+            <!-- Campo para la Referencia -->
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingreferencia" name="referencia" placeholder="Ingrese la Referencia" required="true" pattern="[A-Za-z]{1, 50}">
+                <label for="floatingreferencia">Referencia:</label>
+            </div>
+
+            <!-- Botones de Enviar y Borrar -->
+            <button class="w-100 btn btn-lg btn-primary" name="enviar" type="submit" onclick="validar()">Enviar</button>
+            <button class="w-100 btn btn-lg btn-primary" name="borrar" type="reset">Borrar</button>
+            
+            <!-- Derechos de autor -->
+            <p class="mt-3 mb-3 text-muted">Todos los Derechos Reservados SANTYFASHION ©</p>
+        </form>
+    </main>
+</body>
+
+</html>

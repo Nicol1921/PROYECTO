@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SantyFashion</title>
+
+    <!-- Se incluye el kit de iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- Se establece el ícono de la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="static/img/logo.png">
+    <!-- Se incluyen hojas de estilo CSS desde la carpeta 'static' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Se configura la meta-viewport para la respuesta de diseño web -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+
+    <!-- Encabezado del sitio -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <!-- Logo del sitio -->
+                <h1>SANTY<b>FASHION</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+                <nav>
+                    <ul>
+                        <!-- Menú de navegación -->
+                        <li class="menu-selected">
+                            <!-- Página de inicio seleccionada -->
+                            <a href="/index" class="text-menu-selected">
+                                <i class="fas fa-file-alt"></i>INICIO</a>
+                        </li>
+                        <li class="dropdown">
+                            <!-- Menú desplegable de Catálogo -->
+                            <a href="/catalogo" class="dropbtn">CATÁLOGO</a>
+                        </li>
+                        <li class="dropdown">
+                            <!-- Menú desplegable de Productos -->
+                            <a href="#" class="dropbtn">PRODUCTOS</a>
+                            <div class="dropdown-content">
+                                <a href="/blusas">BLUSAS</a>
+                                <a href="/vestidos">VESTIDOS</a>
+                            </div>
+                            <li><a href="/login">LOGIN</a></li> <!-- Este <li> parece estar mal cerrado -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="ctn-icon-search">
+                <!-- Icono de búsqueda -->
+                <i class="fas fa-search" id="icon-search"></i>
+            </div>
+        </div>
+        <div id="icon-menu">
+            <!-- Icono de menú móvil -->
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <!-- Resultados de búsqueda -->
+    <ul id="box-search">
+        <li><a href="/vestidos"><i class="fas fa-search"></i>Vestidos</a></li>
+        <li><a href="/blusas"><i class="fas fa-search"></i>blusas</a></li>
+    </ul>
+
+    <!-- Contenido principal -->
+    <div class="container-all" id="move-content">
+        <div class="blog-container-cover">
+            <div class="container-info-cover">
+                <h2>¡BIENVENIDOS A SANTYFASHION!</h2>
+                <p>Descubre la última moda en blusas para mujeres ¡TE GUSTARÁ!</p>
+            </div>
+        </div>
+        <section id="nosotros" class="nosotros">
+            <div class="container">
+                <h2>UN POCO SOBRE NOSOTROS.</h2>
+                <p id="parrafo">SantyFashion es una tienda de ropa en línea que ofrece una amplia selección de prendas de vestir para hombres y mujeres. Nos enorgullece brindar productos de alta calidad, tendencias de moda actuales y excelente atención al cliente.
+                    Ya sea que busques ropa casual, formal o de noche, tenemos lo que necesitas para lucir elegante y a la moda en cualquier ocasión. Nuestro equipo de diseñadores y expertos en moda trabaja arduamente para ofrecerte las últimas tendencias
+                    y estilos únicos.</p>
+            </div>
+        </section>
+    </div>
+
+    <section id="productos" class="productos">
+        <div class="container2">
+            <h2>¡ALGUNOS DISEÑOS DE LAS BLUSAS!</h2>
+            <div class="posts"> </div>
+            <BR>
+            <BR>
+            <div class="galeria1">
+                <div class="foto">
+                    <center><br>
+                        <BR><img src="{{ url_for('static', filename='img//articulos/blusa1.jpeg') }}" width="120" height="120" alt="center"></center>
+                </div>
+                <div class="pie">
+                    <p>BLUSA POLO CORTA.</p>
+                </div>
+            </div>
+
+            <div class="galeria2">
+                <div class="foto">
+                    <center><br><br><img src="{{ url_for('static', filename='img//articulos/blusa2.jpeg') }}" width="120" height="120" alt="center"></center>
+                </div>
+                <div class="pie">
+                    <p>BLUSA BLANCA CUELLO V.</p>
+                </div>
+            </div>
+
+            <div class="galeria3">
+                <div class="foto">
+                    <center><br><br><img src="{{ url_for('static', filename='img//articulos/blusa4.jpeg') }}" width="120" height="310" alt="center"></center>
+                </div>
+                <div class="pie">
+                    <p>CONJUNTO FALDA Y BLUSA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Espacios en blanco -->
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+
+    <!-- Pie de página -->
+    <div class="container-footer">
+        <footer>
+            <div class="redes-footer">
+                <!-- Enlaces a redes sociales -->
+                <a href="https://es-la.facebook.com/"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href=""><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+            <hr>
+            <h4>© 2023 SantyFashion - Todos los Derechos Reservados</h4>
+        </footer>
+        <!-- Se incluyen scripts JavaScript desde la carpeta 'static' -->
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/validacionR.js') }}"></script>
+</body>
+
+</html>

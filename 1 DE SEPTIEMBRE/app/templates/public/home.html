@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Se incluye el kit de iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- Se establece el ícono de la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="static/img/logo.png">
+    <!-- Se incluyen hojas de estilo CSS desde la carpeta 'static' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Tu Sitio Web</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="usuario">
+                <img src="ruta_a_la_imagen.jpg" alt="Usuario">
+                <ul>
+                    <li><a href="#">Cerrar Sesion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="bloque">
+            <h2><a href="/app/templates/public/Venta.html">Ventas</a></h2>
+            <!-- Contenido del bloque 1 -->
+        </section>
+        <section class="bloque">
+            <h2><a href="/app/templates/public/PreVenta.html">PreVentas</a></h2>
+            <!-- Contenido del bloque 2 -->
+        </section>
+        <section class="bloque">
+            <h2><a href="/app/templates/public/Prenda.html">Prendas</a></h2>
+            <!-- Contenido del bloque 3 -->
+        </section>
+        <section class="bloque">
+            <h2><a href="/app/templates/public/Referencia.html">Referencias</a></h2>
+            <!-- Contenido del bloque 4 -->
+        </section>
+        <section class="bloque">
+            <h2><a href="/app/templates/public/Admin.html">Administradores</a></h2>
+            <!-- Contenido del bloque 5 -->
+        </section>
+    </main>
+    <footer>
+        <!-- Pie de página -->
+    </footer>
+    <div class="container-footer">
+        <footer>
+            <hr>
+            <h4>© 2023 SantyFashion - Todos los Derechos Reservados</h4>
+        </footer>
+    </div>
+    <!-- Se incluyen scripts JavaScript desde la carpeta 'static' -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/validacionR.js') }}"></script>
+</body>
+</html>
+    

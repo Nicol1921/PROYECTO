@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SANTYFASHION</title> <!-- Título de la página -->
+
+    <!-- Enlace al conjunto de iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al ícono de la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="static/img/logo.png">
+
+    <!-- Enlace a hojas de estilo CSS personalizadas -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- Configuración de la ventana gráfica -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>SANTY<b>FASHION</b></h1> <!-- Logo del sitio -->
+            </div>
+
+            <!-- Menú de navegación -->
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <!-- Enlaces del menú -->
+                        <li><a href="/index">INICIO</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">PRODUCTOS</a> <!-- Menú desplegable de productos -->
+                            <div class="dropdown-content">
+                                <a href="/blusas">BLUSAS</a>
+                                <a href="/vestidos">VESTIDOS</a>
+                            </div>
+                        </li>
+                        <li><a href="/login">LOGIN</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div id="ctn-icon-search">
+                <i class="fas fa-search" id="icon-search"></i> <!-- Icono de búsqueda -->
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i> <!-- Icono de menú desplegable -->
+        </div>
+
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <!-- Lista de resultados de búsqueda -->
+    <ul id="box-search">
+        <li><a href="/vestidos"><i class="fas fa-search"></i>Vestidos</a></li>
+        <li><a href="/blusas"><i class="fas fa-search"></i>blusas</a></li>
+    </ul>
+
+    <!-- Cobertura de búsqueda -->
+    <div id="cover-ctn-search"></div>
+
+    <!-- Portada -->
+    <center>
+        <div class="container-post1">
+
+            <!-- Opciones de categoría -->
+            <input type="radio" id="Vestidos" name="categories" value="Vestidos">
+            <input type="radio" id="blusas" name="categories" value="blusas">
+
+            <div class="container-category">
+                <label for="Vestidos">VESTIDOS</label>
+            </div>
+
+            <div class="posts">
+                <!-- Publicaciones de productos -->
+                <div class="post" data-category="Vestidos">
+                    <div class="ctn-img"><img src="{{ url_for('static', filename='img/articulos/catalogo2.jpeg ') }}" alt=""></div>
+                    <CENTER>
+                        <h2> CONJUNTO DE DOS PIEZAS</h2>
+                    </CENTER>
+                    <BR>
+                    <ul class="ctn-tag">
+                        <BR>
+                        <h2>PRECIO: $ 25.000</h2>
+                    </ul>
+                </div>
+                <!-- Otras publicaciones de productos -->
+                <!-- ... -->
+            </div>
+        </div>
+    </center>
+
+    <!-- Pie de página -->
+    <div class="container-footer">
+
+        <footer>
+            <div class="redes-footer">
+                <!-- Enlaces a redes sociales -->
+                <a href="https://www.facebook.com/SandyFashionBoutique/"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+
+            <hr>
+            <!-- Derechos de autor -->
+            <h4>© 2023 SantyFashion - Todos los Derechos Reservados</h4>
+        </footer>
+    </div>
+
+    <!-- Scripts de JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/validacionR.js') }}"></script>
+</body>
+
+</html>

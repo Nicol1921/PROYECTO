@@ -1,0 +1,71 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 100px;
+    box-shadow: 0 0 50px rgba(0, 94, 255, 0.514);
+    width: 600px;
+    right: 400px;
+    background-color: #ffffff;
+}
+
+.sign-up {
+    text-align: center;
+}
+
+
+/* Estilos para el encabezado "SANTYFASHION" */
+.sign-up h2 {
+    color: #000000;
+    font-size: 40px;
+    margin-bottom: 20px;
+ 
+}
+
+/* Estilos para los campos de entrada */
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.input i {
+    margin-bottom: 5px;
+}
+
+.input input {
+    padding: 10px;
+    border: 1px solid #0040ff81;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Estilos para el botón de registro */
+.button button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos para los íconos de redes sociales */
+.icon i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #000000;
+}
+
+/* Estilos para el pie de página */
+.p {
+    margin-top: 30px;
+    text-align: center;
+    color: #000000;
+    font-size: 12px;
+}

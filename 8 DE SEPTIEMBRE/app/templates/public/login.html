@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SantyFashion</title>
+
+    <!-- Se incluye el kit de iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- Se establece el ícono de la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="static/img/logo.png">
+    <!-- Se incluyen hojas de estilo CSS desde la carpeta 'static' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <!-- Configuración de la respuesta de diseño web -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+
+    <!-- Encabezado del sitio -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <!-- Logo del sitio -->
+                <h1>SANTY<b>FASHION</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+                <nav>
+                    <ul>
+                        <!-- Menú de navegación -->
+                        <li>
+                            <a href="/index">INICIO</a>
+                        </li>                        
+                        <li class="dropdown">
+                            <!-- Menú desplegable de Catálogo -->
+                            <a href="/catalogo" class="dropbtn">CATÁLOGO</a>
+                        </li>
+                        <li class="dropdown">
+                            <!-- Menú desplegable de Productos -->
+                            <a href="#" class="dropbtn">PRODUCTOS</a>
+                            <div class="dropdown-content">
+                                <a href="/blusas">BLUSAS</a>
+                                <a href="/vestidos">VESTIDOS</a>
+                            </div>
+                        </li>
+                        <li class="menu-selected">
+                            <!-- Página de login seleccionada -->
+                            <a href="/login" class="text-menu-selected">
+                                <i class="fas fa-file-alt"></i>LOGIN</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="ctn-icon-search">
+                <!-- Icono de búsqueda -->
+                <i class="fas fa-search" id="icon-search"></i>
+            </div>
+        </div>
+
+        <div id="icon-menu">
+            <!-- Icono de menú móvil -->
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <!-- Resultados de búsqueda -->
+    <ul id="box-search">
+        <li><a href="/vestidos"><i class="fas fa-search"></i>Vestidos</a></li>
+        <li><a href="/blusas"><i class="fas fa-search"></i>blusas</a></li>
+    </ul>
+
+    <div id="cover-ctn-search"></div>
+
+    <!-- Formulario de registro -->
+    <center>
+    <div class="login">
+        <form action="#">
+            <div class="sign-up">
+                <!-- Título y logo del sitio -->
+                <h2>SANTYFASHION</h2>
+                <img src="static/img/logo.png" width="180" height="180">
+            </div>
+            <div class="input">
+                <!-- Icono de usuario y campo de nombre -->
+                <i class="fa-solid fa-user"></i>
+                <label for="input">NOMBRE </label>
+                <input type="text"class="input-mail" autocomplete="off" required>
+            </div>
+            <div class="input">
+                <!-- Icono de candado y campo de contraseña -->
+                <i class="fa-solid fa-lock"></i>
+                <label for="input"> CONTRASEÑA</label>
+                <input type="password" class="input-mail" autocomplete="off" required>
+            </div>
+            <div class="input">
+                <!-- Icono de candado y campo de confirmación de contraseña -->
+                <i class="fa-solid fa-lock"></i>
+                <label for="input"> CONFIRMACIÓN</label>
+                <input type="password"  class="input-mail" autocomplete="off" required>
+            </div>
+            <div class="checkbox">
+                <!-- Checkbox para aceptar términos -->
+                <input type="checkbox" class="check">
+                <label for="check">ACEPTAR TÉRMINOS </label>
+            </div>
+            <div class="button">
+                <BR> <button class="btn"> REGISTRAR </button>
+            </div>
+            <BR><div class="icon">
+                <!-- Iconos de redes sociales -->
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="p">
+                <!-- Derechos de autor -->
+                <p> © 2023 SantyFashion - Todos los Derechos Reservados </p>
+            </div>
+        </form>
+    </div></center>
+    <!-- Se incluye un script JavaScript desde la carpeta 'static' -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

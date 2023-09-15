@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SantyFashion</title>
+
+    <!-- Se incluye el kit de iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- Se establece el ícono de la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="static/img/logo.png">
+    <!-- Se incluyen hojas de estilo CSS desde la carpeta 'static' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Se configura la meta-viewport para la respuesta de diseño web -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+
+    <!-- Encabezado del sitio -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <!-- Logo del sitio -->
+                <h1>Santy<b>Fashion</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+                <nav>
+                    <ul>
+                        <!-- Menú de navegación -->
+                        <li><a href="/index">Inicio</a></li>
+                        <li><a href="/catalogo">Catálogo</a></li>
+                        <li class="dropdown">
+                            <!-- Menú desplegable de Productos -->
+                            <a href="/catalogo" class="dropbtn">Productos</a>
+                            <div class="dropdown-content">
+                                <a href="/blusas">Blusas</a>
+                                <a href="/vestidos">Vestidos</a>
+                            </div>
+                        </li>
+                        <li class="menu-selected">
+                            <!-- Página de contacto seleccionada -->
+                            <a href="contacto.html" class="text-menu-selected">
+                                <i class="fas fa-file-alt"></i>Contacto</a>
+                        </li>
+                        <li><a href="/login">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="ctn-icon-search">
+                <!-- Icono de búsqueda -->
+                <i class="fas fa-search" id="icon-search"></i>
+            </div>
+        </div>
+
+        <div id="icon-menu">
+            <!-- Icono de menú móvil -->
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <!-- Resultados de búsqueda -->
+    <ul id="box-search">
+        <li><a href="/vestidos"><i class="fas fa-search"></i>Vestidos</a></li>
+        <li><a href="/blusas"><i class="fas fa-search"></i>Blusas</a></li>
+    </ul>
+
+    <!-- Contenido principal -->
+    <main>
+        <h2>Contacto</h2>
+        <form>
+            <!-- Formulario de contacto -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <div class="container-footer">
+        <footer>
+            <div class="redes-footer">
+                <!-- Enlaces a redes sociales -->
+                <a href="#"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+            <hr>
+            <h4>© 2023 SantyFashion - Todos los Derechos Reservados</h4>
+        </footer>
+    </div>
+
+    <!-- Se incluyen scripts JavaScript desde la carpeta 'static' -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/validacionR.js') }}"></script>
+</body>
+
+</html>

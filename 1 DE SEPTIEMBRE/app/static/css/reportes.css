@@ -1,0 +1,133 @@
+/*ESTILOS PARA LAS PAGINAS ENCARGADAS DE LOS REPORTES*/
+
+
+/* Estilos generales del cuerpo de la página */
+
+body {
+    background-image: url("https://img.freepik.com/vector-gratis/hipster-ropa-moda-doodle-patron_1284-6445.jpg?w=2000");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+
+/* Estilos para el formulario de inicio de sesión */
+
+.form-signin {
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: rgba(4, 8, 63, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos para los controles de formulario */
+
+.form-signin .form-controlselect {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 12px;
+    background-color: #fff;
+}
+
+
+/* Estilos para las opciones de selección en el formulario */
+
+select option {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+
+/* Estilos para el enfoque de las opciones de selección en el formulario */
+
+select option:focus {
+    background-color: #ddd;
+}
+
+
+/* Estilos al pasar el cursor sobre las opciones de selección en el formulario */
+
+select option:hover {
+    background-color: #eee;
+}
+
+
+/* Estilos responsivos para pantallas pequeñas */
+
+@media (max-width: 576px) {
+    select {
+        width: 100%;
+    }
+}
+
+
+/* Estilos para los encabezados del formulario */
+
+.form-signin h1,
+.form-signin h4 {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Estilos para las imágenes */
+
+img {
+    display: block;
+    margin: 50px auto;
+    max-width: 100%;
+}
+
+
+/* Estilos para el botón del formulario */
+
+.form-signin button {
+    margin-top: 30px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #002769;
+    color: #fff;
+    border: none;
+}
+
+
+/* Estilos para el selector de color */
+
+.form-signin .color-picker {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+/* Estilos para la etiqueta del selector de color */
+
+.form-signin .color-picker label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+/* Estilos para los párrafos en el formulario */
+
+.form-signin p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+}

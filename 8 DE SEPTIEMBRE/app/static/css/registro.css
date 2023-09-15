@@ -1,0 +1,103 @@
+/* Estilos generales para el formulario de registro*/
+
+body {
+    /* Fuente principal */
+    font-family: "broadway", serif;
+    height: 950px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80");
+    padding: 20px;
+    margin: 0;
+    color: #7700ff;
+}
+
+
+/* Estilos para formularios en la página */
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff566;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilos para etiquetas en formularios */
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/* Estilos para varios tipos de entrada en formularios */
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* Estilos para botones en formularios */
+
+button {
+    /* Fuente personalizada */
+    font-family: 'broadway', serif;
+    padding: 10px 20px;
+    background-color: #7700ff;
+    color: #fff;
+    border: none;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Efecto de cambio de color al pasar el cursor sobre el botón */
+
+button:hover {
+    background-color: #00ccff;
+}
+
+
+/* Estilos para elementos con la clase "feedback" */
+
+.feedback {
+    max-width: 100%;
+    width: 100%;
+    background-color: black;
+    padding: 5px;
+    color: white;
+    font-size: 15px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/* Estilos para elementos con la clase "succes" */
+
+.succes {
+    border: 4px solid rgb(40, 255, 40);
+}
+
+
+/* Estilos para elementos con la clase "error" */
+
+.error {
+    border: 4px solid red;
+}

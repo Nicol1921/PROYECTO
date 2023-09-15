@@ -1,0 +1,137 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre elementos de la barra de navegación */
+    align-items: center;
+    padding: 0 25px; /* Espaciado horizontal dentro de la barra de navegación */
+}
+
+nav .usuario {
+    margin-top: 0; /* Eliminamos el margen superior */
+}
+
+nav .usuario img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+nav .usuario ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+nav .usuario:hover ul {
+    display: block;
+}
+
+nav .usuario ul li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.bloque {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    width: 300px;
+}
+
+/* Estilos específicos para roles de usuario y administrador */
+/* Puedes personalizar estos estilos según tus necesidades */
+.usuario ul li:nth-child(1) {
+    color: green;
+}
+
+.usuario ul li:nth-child(2) {
+    color: red;
+}
+
+.usuario ul li:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del contenedor del pie de página */
+.container-footer { 
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos de los enlaces en el pie de página */
+.container-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos del título en el pie de página */
+.container-footer h4 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+/* Estilos de los íconos de redes sociales en el pie de página */
+.container-footer .redes-footer {
+    margin-top: 20px;
+}
+
+/* Estilos de los íconos de redes sociales en el pie de página */
+.container-footer .icon-redes-footer {
+    font-size: 20px;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #000000;
+    color: #333;
+    transition: background-color 300ms;
+}
+
+.bloque a {
+    color: #333; /* Cambiar el color del texto a blanco */
+    background-color: transparent; /* Hacer el fondo transparente */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+}
+
+/* Cambia el color de fondo al pasar el cursor sobre los bloques */
+.bloque:hover {
+    background-color: #46a2fd; /* Color de fondo al pasar el cursor */
+}

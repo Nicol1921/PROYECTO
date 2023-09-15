@@ -1,0 +1,639 @@
+/* ESTILOS GENERALES PARA LAS PÁGINAS PRINCIPALES */
+
+
+/* Importación de la fuente de Google Fonts y estilos globales */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+
+/* Estilos globales para elementos HTML */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* Estilos del cuerpo de la página */
+
+body {
+    background: #f6f6f6;
+}
+
+
+/* Estilos del encabezado fijo en la parte superior */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #333;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 10;
+}
+
+
+/* Estilos del contenido dentro del encabezado */
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: #a2a2a2;
+}
+
+
+/* Estilos del logotipo */
+
+.logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Estilos específicos del logotipo */
+
+.logo h1 b {
+    color: #46a2fd;
+}
+
+
+/* Estilos del menú junto al logotipo */
+
+.logo-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+
+/* Estilos de la imagen del logotipo */
+
+.logo img {
+    height: 100px;
+}
+
+
+/* Estilos de la barra de navegación */
+
+nav {
+    order: 2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Estilos de la lista no ordenada dentro de la barra de navegación */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+
+/* Estilos de los elementos de la lista en la barra de navegación */
+
+nav ul li {
+    margin-right: 20px;
+}
+
+
+/* Estilos del último elemento de la lista en la barra de navegación */
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+
+/* Estilos de los enlaces en la barra de navegación */
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* Estilos de los enlaces en la barra de navegación al pasar el ratón */
+
+nav a:hover {
+    color: rgb(66, 65, 70);
+}
+
+
+/* Estilos del contenido desplegable */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+}
+
+
+/* Estilos de los elementos en el contenido desplegable */
+
+.dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Estilos de los elementos en el contenido desplegable al pasar el ratón */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Mostrar el contenido desplegable al pasar el ratón sobre el elemento padre */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Estilos del contenedor del pie de página */
+
+.container-footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Estilos de los enlaces en el pie de página */
+
+.container-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Estilos del título en el pie de página */
+
+.container-footer h4 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+
+/* Estilos de los íconos de redes sociales en el pie de página */
+
+.container-footer .redes-footer {
+    margin-top: 20px;
+}
+
+
+/* Estilos de los íconos de redes sociales en el pie de página */
+
+.container-footer .icon-redes-footer {
+    font-size: 20px;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #333;
+    transition: background-color 300ms;
+}
+
+
+/* Estilos de los íconos de redes sociales en el pie de página al pasar el ratón */
+
+.container-footer .icon-redes-footer:hover {
+    background-color: #46a2fd;
+    color: #fff;
+}
+
+
+/* Estilos del menú lateral */
+
+.menu {
+    height: 80px;
+    margin-right: 60px;
+}
+
+
+/* Estilos de la navegación dentro del menú lateral */
+
+.menu nav {
+    height: 100%;
+}
+
+
+/* Estilos de la lista no ordenada dentro de la navegación del menú lateral */
+
+.menu nav ul {
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+
+/* Estilos de los elementos de la lista en la navegación del menú lateral */
+
+.menu nav ul li {
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Estilos de la línea de selección en la navegación del menú lateral */
+
+.menu-selected:before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #46a2fd;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Estilos de los enlaces en la navegación del menú lateral */
+
+.menu nav ul li a {
+    color: #777777;
+    font-size: 18px;
+    transition: color 300ms;
+}
+
+
+/* Estilos de los enlaces en la navegación del menú lateral al pasar el ratón */
+
+.menu nav ul li a:hover {
+    color: #46a2fd;
+}
+
+
+/* Estilos del texto seleccionado en la navegación del menú lateral */
+
+.menu .text-menu-selected {
+    color: #46a2fd;
+}
+
+
+/* Estilos de los íconos en la navegación del menú lateral */
+
+.menu nav ul li a i {
+    display: none;
+}
+
+
+/* Estilos del icono de menú en dispositivos móviles */
+
+#icon-menu {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #eeeeeefa;
+    border-radius: 100%;
+    color: #787878;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* Estilos del icono de menú al pasar el ratón */
+
+#icon-menu:hover {
+    opacity: 0.8;
+}
+
+
+/* Buscador de contenido */
+
+
+/* Estilos del icono de búsqueda */
+
+#ctn-icon-search {
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Estilos del ícono de búsqueda */
+
+#ctn-icon-search i {
+    font-size: 18px;
+    color: #777777;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+
+/* Estilos del ícono de búsqueda al pasar el ratón */
+
+#ctn-icon-search i:hover {
+    color: #46a2fd;
+}
+
+
+/* Estilos de la barra de búsqueda */
+
+#ctn-bars-search {
+    position: fixed;
+    top: -10px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    z-index: 9;
+    transition: all 600ms;
+}
+
+
+/* Estilos del campo de entrada en la barra de búsqueda */
+
+#ctn-bars-search input {
+    display: block;
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+    outline: 0;
+}
+
+
+/* Estilos del cuadro de búsqueda */
+
+#box-search {
+    position: fixed;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    background: #fff;
+    z-index: 8;
+    overflow: hidden;
+    display: none;
+}
+
+
+/* Estilos de los elementos en el cuadro de búsqueda */
+
+#box-search li a {
+    display: block;
+    width: 1200px;
+    color: #777777;
+    padding: 12px 20px;
+}
+
+
+/* Estilos de los elementos en el cuadro de búsqueda al pasar el ratón */
+
+#box-search li a:hover {
+    background: #f3f3f3;
+}
+
+
+/* Estilos de los íconos en los elementos del cuadro de búsqueda */
+
+#box-search li a i {
+    margin-right: 10px;
+    color: #777777;
+}
+
+
+/* Estilos de la cubierta del cuadro de búsqueda */
+
+#cover-ctn-search {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    display: none;
+}
+
+
+/* Footer - Pie de página */
+
+
+/* Estilos del contenedor del pie de página */
+
+.container-footer {
+    width: 100%;
+    padding: 40px 0;
+    background: transparent;
+    margin-top: 40px;
+}
+
+
+/* Estilos del contenido dentro del pie de página */
+
+.container-footer footer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Estilos de los íconos de redes sociales en el pie de página */
+
+.container-footer footer .redes-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+/* Estilos de los íconos de redes sociales en el pie de página */
+
+.container-footer footer .redes-footer .icon-redes-footer {
+    font-size: 20px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+}
+
+
+/* Estilos de los íconos de redes sociales en el pie de página al pasar el ratón */
+
+footer .redes-footer .fa-facebook-f:hover {
+    background: #41579A;
+    color: #fff;
+}
+
+footer .redes-footer .fa-google-plus-g:hover {
+    background: #DE4C34;
+    color: #fff;
+}
+
+footer .redes-footer .fa-instagram:hover {
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    color: #fff;
+}
+
+
+/* Estilos de la línea divisoria en el pie de página */
+
+.container-footer footer hr {
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #c0c0c07a;
+}
+
+
+/* Estilos del título en el pie de página */
+
+.container-footer h4 {
+    text-align: center;
+    margin-top: 40px;
+    color: #8e8e8e;
+    font-weight: 500;
+}
+
+
+/* Responsive Design - Adaptable a dispositivos móviles */
+
+@media screen and (max-width: 1220px) {
+    .header-content,
+    .container-footer footer {
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+    #ctn-bars-search,
+    #ctn-bars-search input,
+    #box-search {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
+    .container-all {
+        transition: all 300ms cubic-bezier(1, 0, 0, 1);
+    }
+    .move-container-all {
+        transform: translateX(300px);
+    }
+    .menu {
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1, 0, 0, 1);
+    }
+    .show-lateral {
+        width: 300px;
+        transform: translateX(0px);
+    }
+    .menu nav ul {
+        flex-direction: column;
+    }
+    .menu nav ul li {
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+    .menu-selected:before {
+        width: 0;
+    }
+    .menu nav ul li a {
+        margin-top: 40px;
+        color: #858585;
+    }
+    .menu nav ul li a i {
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: #46a2fd;
+    }
+    #icon-menu {
+        display: flex;
+        right: 60px;
+    }
+    .container-aside {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Estilos para los elementos de submenú */
+
+.submenu-items {
+    display: none;
+}
+
+
+/* Mostrar elementos de submenú al pasar el ratón sobre el elemento padre */
+
+.submenu:hover .submenu-items {
+    display: block;
+}
+
+
+/* Estilos para los elementos de submenú */
+
+.submenu-items li {
+    background-color: #f6f6f6;
+}
+
+
+/* Estilos para los enlaces de submenú */
+
+.submenu-items li a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* Estilos para los enlaces de submenú al pasar el ratón */
+
+.submenu-items li a:hover {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,229 @@
+/*Portada*/
+
+
+/* Estilo del contenedor de portada del artículo */
+
+.article-container-cover {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/img8.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Fondo semitransparente en la portada del artículo */
+
+.article-container-cover:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 172, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Contenedor de información en la portada del artículo */
+
+.container-info-cover {
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Título en la portada del artículo */
+
+.container-info-cover h1 {
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+
+/* Párrafo de descripción en la portada del artículo */
+
+.container-info-cover p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+/* Contenedor del contenido del artículo */
+
+.container-content {
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Estilo de cada artículo */
+
+article {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+/* Línea de color antes del título del artículo */
+
+article:before {
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #46a2fd;
+}
+
+
+/* Título del artículo */
+
+article h1 {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+
+/* Párrafo de contenido en el artículo */
+
+article p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3c3c3c;
+}
+
+
+/* Imagen dentro del artículo */
+
+article img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+/* Estilo del aside que contiene artículos relacionados */
+
+.container-aside aside {
+    width: 320px;
+    border-right: 6px;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    background: #fff;
+}
+
+
+/* Imagen dentro del aside de artículos relacionados */
+
+.container-aside aside img {
+    width: 100%;
+}
+
+
+/* Título y párrafo dentro del aside de artículos relacionados */
+
+.container-aside aside h2,
+.container-aside aside p {
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+
+/* Botón dentro del aside de artículos relacionados */
+
+.container-aside aside button {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #46a2fd;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+
+/* Efecto de hover en el botón */
+
+.container-aside aside button:hover {
+    opacity: 0.9;
+}
+
+
+/* Estilos responsivos para diferentes tamaños de pantalla */
+
+@media screen and (max-width: 1220px) {
+    .container-content {
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+}
+
+
+/* Estilos para pantallas con un ancho máximo de 1020px */
+
+@media screen and (max-width: 1020px) {
+    /* Cambia el ancho del contenedor principal para adaptarse a una columna */
+    .container-content {
+        width: 100%;
+        flex-direction: column;
+    }
+    /* Elimina la sombra de caja en los artículos */
+    article {
+        box-shadow: 0 0 0 0;
+    }
+    /* Alinea los elementos dentro del aside en el centro */
+    .container-aside {
+        display: flex;
+        justify-content: center;
+    }
+    /* Limita el ancho máximo de los elementos dentro del aside */
+    .container-aside aside {
+        max-width: 300px;
+        margin: 10px;
+    }
+}
+
+
+/* Estilos para pantallas con un ancho máximo de 800px */
+
+@media screen and (max-width: 800px) {
+    /* Permite que los elementos dentro del aside se envuelvan en una nueva línea */
+    .container-aside {
+        flex-wrap: wrap;
+    }
+    /* Ajusta la posición del elemento con el id "icon-menu" hacia la derecha */
+    #icon-menu {
+        right: 20px;
+    }
+}

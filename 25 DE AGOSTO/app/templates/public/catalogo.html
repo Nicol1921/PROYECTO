@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SANTYFASHION</title>
+
+    <!-- Se incluye el kit de iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- Se establece el ícono de la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="static/img/logo.png">
+    <!-- Se incluyen hojas de estilo CSS desde la carpeta 'static' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Se configura la meta-viewport para la respuesta de diseño web -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>SANTY<b>FASHION</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+                <nav>
+                    <ul>
+                        <!-- Enlaces de navegación -->
+                        <li><a href="/index">INICIO</a></li>
+                        <!-- Seleccionar el menú de catálogo -->
+                        <li class="dropdown">
+                            <li class="menu-selected">
+                                <a href="/catalogo" class="text-menu-selected">
+                                    <i class="fas fa-file-alt"></i>CATÁLOGO</a>
+                            </li>
+                        </li>
+                        <!-- Menú desplegable de productos -->
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">PRODUCTOS</a>
+                            <div class="dropdown-content">
+                                <a href="/blusas">BLUSAS</a>
+                                <a href="/vestidos">VESTIDOS</a>
+                            </div>
+                        </li>
+                        <!-- Enlace de inicio de sesión -->
+                        <li><a href="/login">LOGIN</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="ctn-icon-search">
+                <!-- Icono de búsqueda -->
+                <i class="fas fa-search" id="icon-search"></i>
+            </div>
+        </div>
+        <div id="icon-menu">
+            <!-- Icono de menú móvil -->
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div id="ctn-bars-search">
+        <!-- Barra de búsqueda móvil -->
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <ul id="box-search">
+        <!-- Resultados de búsqueda móvil -->
+        <li><a href="/vestidos"><i class="fas fa-search"></i>Vestidos</a></li>
+        <li><a href="/blusas"><i class="fas fa-search"></i>Blusas</a></li>
+    </ul>
+
+    <div id="cover-ctn-search"></div>
+
+    <!-- Portada -->
+    <div class="container-post1">
+        <input type="radio" id="TODOS" name="categories" value="TODOS" checked>
+        <input type="radio" id="Vestidos" name="categories" value="Vestidos">
+        <input type="radio" id="blusas" name="categories" value="blusas">
+
+        <div class="container-category">
+            <!-- Etiquetas de selección de categoría -->
+            <label for="TODOS">TODOS</label>
+            <label for="Vestidos">VESTIDOS</label>
+            <label for="blusas">BLUSAS</label>
+        </div>
+
+        <!-- Publicaciones de productos -->
+        <div class="posts">
+            <div class="post" data-category="blusas">
+                <!-- Detalles del producto -->
+                <div class="ctn-img">
+                    <img src="{{ url_for('static', filename='img/articulos/catalogo4.jpeg ') }}" alt="">
+                </div>
+                <CENTER>
+                    <h2>BLUSA CORTA Y CORSET</h2>
+                </CENTER>
+                <BR>
+                <ul class="ctn-tag">
+                    <BR>
+                    <h2>PRECIO: $ 55.000</h2>
+                </ul>
+            </div>
+            <!-- Otras publicaciones de productos -->
+            <!-- ... -->
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="container-footer">
+        <footer>
+            <div class="redes-footer">
+                <!-- Enlaces a redes sociales -->
+                <a href="#"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+            <hr>
+            <h4>© 2023 SantyFashion - Todos los Derechos Reservados</h4>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/validacionR.js') }}"></script>
+</body>
+
+</html>
